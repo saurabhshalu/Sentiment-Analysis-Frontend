@@ -1,0 +1,11 @@
+{
+    "hashtag": "yourtag",
+    "positive": 30.1,
+    "negative": 20.8,
+    "neutral": 49.1,
+    "tweetcount": 1000,
+    "tweet": {
+        "positive": ["tweet1", "tweet2", "tweet3"],
+        "negative": ["tweet1","tweet2"]
+    } 
+}

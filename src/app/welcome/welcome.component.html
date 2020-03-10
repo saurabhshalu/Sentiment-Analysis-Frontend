@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="assets/img/icon2.svg" width="30" height="30" class="d-inline-block align-top" alt="SentimentAnalysisOfTweets">
+        Sentiment Analysis
+    </a>
+</nav>
+<div class="c-container">
+    <div class="search-container" [ngClass] = "{'search-empty': searchtext.length===0, 'search-nonempty': searchtext.length>0}">
+        <input type="text" class="form-control txtsearch" [(ngModel)]="searchtext" placeholder="#search"
+            (keydown)="onKeyDown($event)">
+    </div>
+    <br/><br/><br/>
+    <div class="main-data">
+        <div class="piechart" *ngIf="searchtext.length!==0 && newPieChartData">
+            <app-pie-chart [newPieChartData]="newPieChartData"></app-pie-chart>
+            <p style="text-align: center; font-size: 24px;">({{resultdata.tweetcount}} Tweets)&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div class="tweetlist" *ngIf="newPieChartData!==null && searchtext.length!==0 && resultdata.tweetcount>0"> 
+            <h3>Positive: </h3>
+            <app-tweet [myurl]="resultdata.positweet"></app-tweet>
+            <h3>Negative: </h3>
+            <app-tweet [myurl]="resultdata.negatweet"></app-tweet>
+        </div>
+        <!-- <div *ngFor="let res of resultdata;">
+            <h1>{{res.positive}}</h1>
+        </div>  -->     
+    </div>
+</div>

@@ -1,0 +1,66 @@
+.navbar {
+    min-width: 440px;
+}
+.c-container {
+    min-width: 440px;
+    height: calc(100vh - 56px);
+    width: 100%;
+    background: #131110;
+    color: white;
+    padding: 20px; 
+    overflow-x: hidden;
+}
+.search-container {
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: ease all .5s;
+    z-index: 999;
+}
+.search-nonempty {
+    top: 30px;
+    transition: ease all .5s;
+}
+
+.search-empty {
+    top: 50%;
+    transition: ease all .5s;
+}
+
+.txtsearch {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-data {
+    display: flex;
+    flex-direction: row;
+}
+.piechart {
+    flex: 1;
+}
+.tweetlist {
+    flex: 1;
+}
+
+@media screen and (max-width: 850px) {
+    .search-container {
+        top: 80px;
+        position: fixed;
+        transition: ease all .5s;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .main-data {
+        flex-direction: column;
+    }
+}
