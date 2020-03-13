@@ -1,2 +1,20 @@
 /* You can add global styles to this file, and also import other style files easily */
-
+body {
+    background: #131110;
+}
+.navbar {
+    min-width: 440px;
+}
+.c-container {
+    min-width: 440px;
+    height: calc(100vh - 56px);
+    width: 100%;
+    background: #eae7dc; /* #131110 #5cdb95 */
+    color: black;
+    padding: 20px; 
+    overflow-x: hidden;
+}
+.chart-grooming {
+    max-width: 900px;
+    min-width: 420px;
+}

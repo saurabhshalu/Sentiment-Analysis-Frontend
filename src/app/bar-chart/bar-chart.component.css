@@ -1,0 +1,20 @@
+.center-everything {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.chart-grooming {
+    flex: 1;
+}
+.details-options {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+tr {
+    margin: 100px;
+    padding: 100px;
+}

@@ -9,14 +9,16 @@ import { ChartsModule } from 'ng2-charts';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TweetComponent } from './tweet/tweet.component'
+import { TweetComponent } from './tweet/tweet.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     PieChartComponent,
-    TweetComponent
+    TweetComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,

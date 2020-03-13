@@ -1,15 +1,3 @@
-.navbar {
-    min-width: 440px;
-}
-.c-container {
-    min-width: 440px;
-    height: calc(100vh - 56px);
-    width: 100%;
-    background: #131110;
-    color: white;
-    padding: 20px; 
-    overflow-x: hidden;
-}
 .search-container {
     width: 400px;
     height: 50px;

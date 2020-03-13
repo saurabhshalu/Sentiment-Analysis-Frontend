@@ -1,0 +1,53 @@
+<div class="c-container center-everything">
+    <div class="details-options">
+        <table>
+            <tr>
+                <td align="right"><label for="hashtag">Hashtag:&nbsp;</label></td>
+                <td><input style="width: 300px;" type="text" class="form-control" name="hashtag" [(ngModel)]="hashtag"/></td>
+            </tr>
+            <tr>
+                <td><label for="tweetdays">No. of days:&nbsp;</label></td>
+                <td>
+                    <select class="form-control" name="tweetdays" [(ngModel)]="tweetdays">
+                        <option value="">--Select--</option>
+                        <option value="1">1 day</option>            
+                        <option value="2">2 days</option>
+                        <option value="3">3 days</option>
+                        <option value="4">4 days</option>            
+                        <option value="5">5 days</option>
+                        <option value="6">6 days</option>
+                        <option value="7">7 days</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="tweetcount">Tweets/day:&nbsp;</label></td>
+                <td>
+                    <select class="form-control" name="tweetcount" [(ngModel)]="tweetcount">
+                        <option value="">--Select--</option>
+                        <option value="100">100 tweets</option>            
+                        <option value="200">200 tweets</option>
+                        <option value="500">500 tweets</option>
+                        <option value="1000">1000 tweets</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="form-control btn btn-info" (click)="detailed_search()">Search</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="chart-wrapper chart-grooming">
+        <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+        </canvas>
+    </div>
+</div>

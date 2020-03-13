@@ -1,9 +1,3 @@
-<nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-        <img src="assets/img/icon2.svg" width="30" height="30" class="d-inline-block align-top" alt="SentimentAnalysisOfTweets">
-        Sentiment Analysis
-    </a>
-</nav>
 <div class="c-container">
     <div class="search-container" [ngClass] = "{'search-empty': searchtext.length===0, 'search-nonempty': searchtext.length>0}">
         <input type="text" class="form-control txtsearch" [(ngModel)]="searchtext" placeholder="#search"
