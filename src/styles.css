@@ -9,8 +9,8 @@ body {
     min-width: 440px;
     height: calc(100vh - 56px);
     width: 100%;
-    background: #eae7dc; /* #131110 #5cdb95 */
-    color: black;
+    background: #131110; /* #131110 #5cdb95 */
+    color: white;
     padding: 20px; 
     overflow-x: hidden;
 }
