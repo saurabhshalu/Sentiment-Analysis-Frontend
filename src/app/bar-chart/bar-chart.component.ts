@@ -21,19 +21,28 @@ export class BarChartComponent implements OnInit {
       }
     }
   };
-  public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  // public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  // public barChartType: ChartType = 'bar';
+  // public barChartLegend = true;
+
+  // public barChartData: ChartDataSets[] = [
+  //   { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
+  //   { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+  // ];
+
+  public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012','2006', '2007', '2008', '2009', '2010', '2011', '2012','2006', '2007', '2008', '2009', '2010', '2011', '2012'];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
 
   public barChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+    { data: [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
+    { data: [28, 48, 40, 19, 86, 27, 90,28, 48, 40, 19, 86, 27, 90,28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
   ];
 
-
   hashtag: string = ''
-  tweetdays: string = ''
-  tweetcount: string = ''  
+  dorm: string = "-1"
+  countofdorm: string = '0'
+  tweetcount: string = '0'  
 
   constructor(private http: HttpClient) { }
 
@@ -41,11 +50,10 @@ export class BarChartComponent implements OnInit {
   }
 
   detailed_search() {
-    console.log(this.hashtag)
-    console.log(this.tweetdays)
-    console.log(this.tweetcount)
-
-    this.http.get('https://25d32100.ngrok.io/reqres?hashtag=' + this.hashtag.replace('#','') + ' &days=' + this.tweetdays + '&countperday=' + this.tweetcount).subscribe((data: any[])=>{ 
+    if (this.hashtag.length==0 || this.dorm == "-1" || this.countofdorm=="0" || this.tweetcount=="0") {
+      return
+    }
+    this.http.get('https://25d32100.ngrok.io/reqres?hashtag=' + this.hashtag.replace('#','') + ' &type=1&dorm=' + this.dorm + '&countofdorm=' + this.countofdorm + '&tweetcount=' + this.tweetcount).subscribe((data: any[])=>{ 
       //console.log('https://saurabh.localtunnel.me/reqres?hashtag=' + this.hashtag.replace('#','') + ' &days=' + this.tweetdays + '&countperday=' + this.tweetcount)
       this.barChartData = data;
       console.log(data);
@@ -53,8 +61,11 @@ export class BarChartComponent implements OnInit {
     (err: any[])=>{
       console.log(err);
     })
+  }
 
-
+  clickFn() {
+    console.log("clicked");
+    (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
   }
 
 }
