@@ -9,7 +9,7 @@ body {
     min-width: 440px;
     height: calc(100vh - 56px);
     width: 100%;
-    background: #00adb5; /* #131110 #5cdb95 */
+    background: #131110; /* #131110 #5cdb95 */
     color: white;
     padding: 20px; 
     overflow-x: hidden;

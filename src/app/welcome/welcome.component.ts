@@ -33,10 +33,8 @@ export class WelcomeComponent implements OnInit {
     console.log('testing');
     (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
     this.newPieChartData = null;
-    //this.http.get('http://192.168.137.1:8000/reqres?hashtag=' + this.searchtext.replace('#','') + '&tcount=1000').subscribe((data: any[])=>{
     this.http.get('./assets/data/db.json').subscribe((data: any[])=>{ 
     //this.http.get('https://25d32100.ngrok.io/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
-      //console.log('https://saurabh.localtunnel.me/reqres?hashtag=lol&tcount=1000')
       this.resultdata = data;
       this.newPieChartData = [this.resultdata["positive"].toFixed(1), this.resultdata["negative"].toFixed(1), (100 - (this.resultdata["positive"] + this.resultdata["negative"])).toFixed(1)];
       console.log(data);
