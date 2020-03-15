@@ -45,6 +45,16 @@ export class PieChartComponent implements OnInit, OnChanges {
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
   public pieChartPlugins = [];
+  // public pieChartBackgroundColor = [
+  //   {
+  //     backgroundColor: [
+  //       'rgba(110, 114, 20, 1)',
+  //       'rgba(118, 183, 172, 1)',
+  //       'rgba(0, 148, 97, 1)'
+  //     ],
+  //     borderColor: 'black'
+  //   }
+  // ];
 
   constructor() { }
 
