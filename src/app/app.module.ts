@@ -12,6 +12,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TweetComponent } from './tweet/tweet.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
     WelcomeComponent,
     PieChartComponent,
     TweetComponent,
-    BarChartComponent
+    BarChartComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

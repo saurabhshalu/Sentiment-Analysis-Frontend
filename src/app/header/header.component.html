@@ -1,0 +1,20 @@
+<div id="overlay" #overlay>
+    <div class = "centered">
+        <div class = "blob-1"></div>
+        <div class = "blob-2"></div>
+    </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="assets/img/icon2.svg" width="30" height="30" class="d-inline-block align-top" alt="SentimentAnalysisOfTweets">
+        Sentiment Analysis
+    </a>
+    <ul class="navbar-nav ml-auto">
+        <li *ngIf="router.url != '/bar'">
+            <a [routerLink] = "'/bar'">DETAILED MODE</a>
+        </li>
+        <li *ngIf="router.url == '/bar'">
+            <a [routerLink] = "'/'">SIMPLE MODE</a>
+        </li>
+    </ul>
+</nav>

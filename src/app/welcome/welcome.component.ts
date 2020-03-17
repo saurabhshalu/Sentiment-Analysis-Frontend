@@ -30,16 +30,15 @@ export class WelcomeComponent implements OnInit {
     }
   }
   getdata() {
-    console.log('testing');
     (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
     this.newPieChartData = null;
-    this.http.get('./assets/data/db.json').subscribe((data: any[])=>{ 
+    //this.http.get('./assets/data/db.json').subscribe((data: any[])=>{ 
     //this.http.get('https://25d32100.ngrok.io/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
+    this.http.get('http://127.0.0.1:8000/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
       this.resultdata = data;
       this.newPieChartData = [this.resultdata["positive"].toFixed(1), this.resultdata["negative"].toFixed(1), (100 - (this.resultdata["positive"] + this.resultdata["negative"])).toFixed(1)];
       console.log(data);
-      
-    (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
+      (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
     },
     (err: any[])=>{
       console.log(err);

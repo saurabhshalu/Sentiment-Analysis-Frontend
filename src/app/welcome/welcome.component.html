@@ -12,11 +12,11 @@
         <div class="tweetlist" *ngIf="newPieChartData!==null && searchtext.length!==0 && resultdata.tweetcount>0"> 
             <div>
                 <h3>Positive: </h3>
-                <app-tweet [myurl]="resultdata.positweet"></app-tweet>
+                <app-tweet [myurl]="resultdata.postweet[0]"></app-tweet>
             </div>
             <div>
                 <h3>Negative: </h3>
-                <app-tweet [myurl]="resultdata.negatweet"></app-tweet>
+                <app-tweet [myurl]="resultdata.negtweet[0]"></app-tweet>
             </div>
         </div>
         <!-- <div *ngFor="let res of resultdata;">
