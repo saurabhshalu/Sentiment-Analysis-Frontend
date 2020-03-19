@@ -10,6 +10,11 @@ export class DoughnutComponent implements OnInit {
   @Input() newChartData;
 
   public chartOptions: any = {
+    elements: {
+        arc: {
+            borderWidth: 0
+        }
+    },
     legend: {
       labels: {
         fontColor: "white",
@@ -46,8 +51,8 @@ export class DoughnutComponent implements OnInit {
   public chartColors: any[] = 
   [
       {
-          backgroundColor: ['#00adb5','#e35f24','#00b57f'],
-          borderColor: 'white'
+          backgroundColor: ['#1261a0','#3895d3','#58cced'],
+          borderColor: '#072f5f'
       }
   ]
   constructor() { }
