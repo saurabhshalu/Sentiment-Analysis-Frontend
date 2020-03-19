@@ -4,23 +4,23 @@
             (keydown)="onKeyDown($event)">
     </div>
     <br/><br/><br/>
-
     <div class="section1" *ngIf="searchtext.length!==0 && newChartData">
-        <br/>
         <app-doughnut [newChartData]="newChartData"></app-doughnut>
         <div style="text-align: center;">
-            <h3>({{resultdata.tweetcount}} Tweets)</h3>
+            <h3>{{resultdata.tweetcount}} Tweets analysed</h3>
         </div>
     </div>
+    <br/>        <br/>        <br/>
     <div class="section2" *ngIf="newChartData!==null && searchtext.length!==0 && resultdata.tweetcount>0">
-        <br/>
-        <div>
-            <h3>Positive: </h3>
+        <div class="left">
+            <h3>Positive</h3>
             <app-tweet [myurl]="resultdata.postweet[0]"></app-tweet>
+            <app-tweet [myurl]="resultdata.postweet[1]"></app-tweet>
         </div>
-        <div>
-            <h3>Negative: </h3>
+        <div class="right">
+            <h3>Negative</h3>
             <app-tweet [myurl]="resultdata.negtweet[0]"></app-tweet>
+            <app-tweet [myurl]="resultdata.negtweet[1]"></app-tweet>
         </div>
     </div>
 </div>

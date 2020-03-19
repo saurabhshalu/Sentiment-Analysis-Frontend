@@ -23,14 +23,6 @@ export class DoughnutComponent implements OnInit {
       },
       position: "bottom"
     },
-    title: {
-      text: "Whole Overview",
-      fontColor: "white",
-      fontSize: 22,
-      padding: 20,
-      display: true,
-      position: "bottom"
-    },
     tooltips: {
       enabled: true,
       mode: "single",
