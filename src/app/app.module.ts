@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TweetComponent } from './tweet/tweet.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { HeaderComponent } from './header/header.component';
+import { DoughnutComponent } from './doughnut/doughnut.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HeaderComponent } from './header/header.component';
     PieChartComponent,
     TweetComponent,
     BarChartComponent,
-    HeaderComponent
+    HeaderComponent,
+    DoughnutComponent
   ],
   imports: [
     BrowserModule,

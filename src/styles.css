@@ -1,19 +1,15 @@
-/* You can add global styles to this file, and also import other style files easily */
 body {
-    background: #131110;
-}
-.navbar {
-    min-width: 440px;
+    background: #181818;
+    color: white;
 }
 .c-container {
     min-width: 440px;
     height: calc(100vh - 56px);
     width: 100%;
-    background: #131110; /* #131110 #5cdb95 */
-    color: white;
     padding: 20px; 
     overflow-x: hidden;
 }
+
 .chart-grooming {
     max-width: 900px;
     min-width: 420px;
@@ -74,10 +70,10 @@ body {
 
 a 
 {
-    color: #FFF;
+    color: rgb(204, 196, 196);
     font-weight: bold;
 }
 a:hover 
 {
-    color: #00F
+    color: rgb(204, 196, 196);
 }

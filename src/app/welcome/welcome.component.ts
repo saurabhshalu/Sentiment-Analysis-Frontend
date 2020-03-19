@@ -12,16 +12,16 @@ export class WelcomeComponent implements OnInit {
 
   public searchtext : string;
   public resultdata: Object;
-  public newPieChartData: any;
+  public newChartData: any;
 
   ngOnInit() {
     this.resultdata = null;
     this.searchtext = '';
-    this.newPieChartData = null;
+    this.newChartData = null;
   }
   onKeyDown(event: any) {
     if(this.searchtext.length === 0) {
-      this.newPieChartData = null;
+      this.newChartData = null;
     }
     else {
       if(event.keyCode === 13 && this.searchtext.length !==0) {
@@ -31,12 +31,12 @@ export class WelcomeComponent implements OnInit {
   }
   getdata() {
     (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
-    this.newPieChartData = null;
+    this.newChartData = null;
     //this.http.get('./assets/data/db.json').subscribe((data: any[])=>{ 
     //this.http.get('https://25d32100.ngrok.io/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
     this.http.get('http://127.0.0.1:8000/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
       this.resultdata = data;
-      this.newPieChartData = [this.resultdata["positive"].toFixed(1), this.resultdata["negative"].toFixed(1), (100 - (this.resultdata["positive"] + this.resultdata["negative"])).toFixed(1)];
+      this.newChartData = [this.resultdata["positive"].toFixed(1), this.resultdata["negative"].toFixed(1), (100 - (this.resultdata["positive"] + this.resultdata["negative"])).toFixed(1)];
       console.log(data);
       (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
     },

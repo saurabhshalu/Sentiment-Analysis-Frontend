@@ -1,26 +1,26 @@
-<div class="c-container">
+<div class="wrapper">
     <div class="search-container" [ngClass] = "{'search-empty': searchtext.length===0, 'search-nonempty': searchtext.length>0}">
-        <input type="text" class="form-control txtsearch" [(ngModel)]="searchtext" placeholder="#search"
+        <input type="text" class="form-control txtsearch" [(ngModel)]="searchtext" placeholder="search hashtag"
             (keydown)="onKeyDown($event)">
     </div>
     <br/><br/><br/>
-    <div class="main-data">
-        <div class="piechart" *ngIf="searchtext.length!==0 && newPieChartData">
-            <app-pie-chart [newPieChartData]="newPieChartData"></app-pie-chart>
-            <p style="text-align: center; font-size: 24px;">({{resultdata.tweetcount}} Tweets)</p>
+
+    <div class="section1" *ngIf="searchtext.length!==0 && newChartData">
+        <br/>
+        <app-doughnut [newChartData]="newChartData"></app-doughnut>
+        <div style="text-align: center;">
+            <h3>({{resultdata.tweetcount}} Tweets)</h3>
         </div>
-        <div class="tweetlist" *ngIf="newPieChartData!==null && searchtext.length!==0 && resultdata.tweetcount>0"> 
-            <div>
-                <h3>Positive: </h3>
-                <app-tweet [myurl]="resultdata.postweet[0]"></app-tweet>
-            </div>
-            <div>
-                <h3>Negative: </h3>
-                <app-tweet [myurl]="resultdata.negtweet[0]"></app-tweet>
-            </div>
+    </div>
+    <div class="section2" *ngIf="newChartData!==null && searchtext.length!==0 && resultdata.tweetcount>0">
+        <br/>
+        <div>
+            <h3>Positive: </h3>
+            <app-tweet [myurl]="resultdata.postweet[0]"></app-tweet>
         </div>
-        <!-- <div *ngFor="let res of resultdata;">
-            <h1>{{res.positive}}</h1>
-        </div>  -->     
+        <div>
+            <h3>Negative: </h3>
+            <app-tweet [myurl]="resultdata.negtweet[0]"></app-tweet>
+        </div>
     </div>
 </div>
