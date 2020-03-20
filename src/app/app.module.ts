@@ -14,6 +14,7 @@ import { TweetComponent } from './tweet/tweet.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { HeaderComponent } from './header/header.component';
 import { DoughnutComponent } from './doughnut/doughnut.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DoughnutComponent } from './doughnut/doughnut.component';
     TweetComponent,
     BarChartComponent,
     HeaderComponent,
-    DoughnutComponent
+    DoughnutComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
