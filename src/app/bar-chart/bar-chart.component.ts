@@ -63,9 +63,4 @@ export class BarChartComponent implements OnInit {
     })
   }
 
-  clickFn() {
-    console.log("clicked");
-    (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
-  }
-
 }

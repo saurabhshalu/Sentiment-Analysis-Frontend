@@ -1,0 +1,25 @@
+.center-everything {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 94vh;
+}
+.chart-grooming {
+    flex: 1;
+}
+.details-options {
+    margin: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .center-everything {
+        flex-direction: column;
+    }
+    .chart-grooming {
+        padding-top: 50px;
+        min-width: 0px;
+        width: 100%;
+    }
+}

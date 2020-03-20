@@ -15,6 +15,7 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { HeaderComponent } from './header/header.component';
 import { DoughnutComponent } from './doughnut/doughnut.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LineChartComponent } from './line-chart/line-chart.component';
     BarChartComponent,
     HeaderComponent,
     DoughnutComponent,
-    LineChartComponent
+    LineChartComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

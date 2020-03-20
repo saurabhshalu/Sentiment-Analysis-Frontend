@@ -10,10 +10,10 @@
         Sentiment Analysis
     </a>
     <ul class="navbar-nav ml-auto">
-        <li *ngIf="router.url != '/line'">
-            <a [routerLink] = "'/line'">DETAILED MODE</a>
+        <li *ngIf="router.url != '/details'">
+            <a [routerLink] = "'/details'">DETAILED MODE</a>
         </li>
-        <li *ngIf="router.url == '/line'">
+        <li *ngIf="router.url == '/details'">
             <a [routerLink] = "'/'">SIMPLE MODE</a>
         </li>
     </ul>

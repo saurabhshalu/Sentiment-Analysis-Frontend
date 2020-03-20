@@ -1,9 +1,9 @@
-<div class="c-container center-everything">
+<div class="center-everything">
     <div class="details-options">
         <table>
             <tr>
                 <td align="right"><label for="hashtag">Hashtag:&nbsp;</label></td>
-                <td><input style="width: 300px;" type="text" class="form-control" name="hashtag" [(ngModel)]="hashtag"/></td>
+                <td><input placeholder="search hashtag" style="width: 300px;" type="text" class="form-control" name="hashtag" [(ngModel)]="hashtag"/></td>
             </tr>
             <tr>
                 <td align="right"><label for="dorm">Type:&nbsp;</label></td>
@@ -21,9 +21,9 @@
                     <select class="form-control" name="countofdorm" [(ngModel)]="countofdorm">
                         <option value="0">--Select--</option>
                         <ng-template [ngIf]="dorm=='0'">
-                            <option value="5">5 days</option>            
-                            <option value="10">10 days</option>
-                            <option value="15">15 days</option>
+                            <option value="3">3 days</option>            
+                            <option value="6">6 days</option>
+                            <option value="9">9 days</option>
                         </ng-template>
                         <ng-template [ngIf]="dorm=='1'">
                             <option value="3">3 months</option>            
@@ -59,14 +59,7 @@
             </tr>
         </table>
     </div>
-    <div class="chart-wrapper chart-grooming">
-        <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [plugins]="barChartPlugins"
-            [legend]="barChartLegend"
-            [chartType]="barChartType">
-        </canvas>
+    <div *ngIf="1===1" class="chart-grooming">
+        <app-line-chart [newChartData]="lineChartData"></app-line-chart>
     </div>
 </div>
