@@ -72,21 +72,6 @@ input:focus {
     .section2 {
         flex-direction: column;
     }
-
-    /* .wrapper {
-        flex-direction: column;
-        overflow: auto;
-    }
-    .section1 {
-        overflow: initial;
-    }
-    body {
-        overflow: auto;
-    }
-    .section2 {
-        overflow: initial;
-    }
-     */
     .search-nonempty {
         top: 110px;
         transition: ease all .5s;

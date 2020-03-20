@@ -46,4 +46,5 @@ export class WelcomeComponent implements OnInit {
       (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
     });
   }
+  
 }

@@ -2,3 +2,56 @@
     min-width: 440px;
     background: #212121;
 }
+
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0); /* Black background with opacity */
+    z-index: 1000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+.centered{
+    width:400px;
+    height:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.blob-1,.blob-2{
+	width:70px;
+	height:70px;
+	position:absolute;
+	background:#fff;
+	border-radius:50%;
+	top:50%;left:50%;
+	transform:translate(-50%,-50%);
+}
+.blob-1{
+	left:20%;
+	animation:osc-l 2.5s ease infinite;
+}
+.blob-2{
+	left:80%;
+	animation:osc-r 2.5s ease infinite;
+	background:#0ff;
+}
+@keyframes osc-l{
+	0%{left:20%;}
+	50%{left:50%;}
+	100%{left:20%;}
+}
+@keyframes osc-r{
+	0%{left:80%;}
+	50%{left:50%;}
+	100%{left:80%;}
+}
