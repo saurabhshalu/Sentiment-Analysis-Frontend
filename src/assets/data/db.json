@@ -5,5 +5,6 @@
     "neutral": 49.1,
     "tweetcount": 1000,
     "positweet": "https://twitter.com/TrinityNeuro/status/1236299884547932161",
-    "negatweet": "https://twitter.com/brunsworthb/status/1236300908910305281"
+    "negatweet": "https://twitter.com/brunsworthb/status/1236300908910305281",
+    "imp": "this.imagePath = this.domSanitizer.bypassSecurityTrustUrl(imgdata);"
 }

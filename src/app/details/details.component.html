@@ -71,11 +71,8 @@
         </div>
     </div>
     <div class="section2" *ngIf="lineChartData!=null && lineChartData.tweetcount>0">
-        <div class="left1">
+        <div class="doughnut-chart">
             <app-doughnut [newChartData]="newChartData"></app-doughnut>
-        </div>
-        <div class="right1">
-            <h2>section 2 right</h2>
         </div>
     </div>
     <div class="section3" *ngIf="lineChartData!=null && lineChartData.tweetcount>0">
@@ -88,6 +85,11 @@
             <h3>Negative</h3>
             <app-tweet [myurl]="lineChartData.negtweet[0]"></app-tweet>
             <app-tweet [myurl]="lineChartData.negtweet[1]"></app-tweet>
+        </div>
+    </div>
+    <div class="section4">     
+        <div class="right11" *ngIf="imagePath!=null">
+            <img [src]="imagePath"/>
         </div>
     </div>
 </div>

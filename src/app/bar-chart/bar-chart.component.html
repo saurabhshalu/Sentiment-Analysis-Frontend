@@ -1,72 +1,8 @@
-<div class="c-container center-everything">
-    <div class="details-options">
-        <table>
-            <tr>
-                <td align="right"><label for="hashtag">Hashtag:&nbsp;</label></td>
-                <td><input style="width: 300px;" type="text" class="form-control" name="hashtag" [(ngModel)]="hashtag"/></td>
-            </tr>
-            <tr>
-                <td align="right"><label for="dorm">Type:&nbsp;</label></td>
-                <td>
-                    <select class="form-control" name="dorm" [(ngModel)]="dorm">
-                        <option value="-1">--Select--</option>
-                        <option value="0">DAYS</option>            
-                        <option value="1">MONTHS</option>
-                    </select>    
-                </td>
-            </tr>
-            <tr>
-                <td align="right"><label for="countofdorm">Duration:&nbsp;</label></td>
-                <td>
-                    <select class="form-control" name="countofdorm" [(ngModel)]="countofdorm">
-                        <option value="0">--Select--</option>
-                        <ng-template [ngIf]="dorm=='0'">
-                            <option value="5">5 days</option>            
-                            <option value="10">10 days</option>
-                            <option value="15">15 days</option>
-                        </ng-template>
-                        <ng-template [ngIf]="dorm=='1'">
-                            <option value="3">3 months</option>            
-                            <option value="6">6 months</option>
-                            <option value="12">12 months</option>   
-                        </ng-template>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td align="right"><label for="tweetcount">Count:&nbsp;</label></td>
-                <td>
-                    <select class="form-control" name="tweetcount" [(ngModel)]="tweetcount">
-                        <option value="0">--Select--</option>        
-                        <ng-template [ngIf]="dorm=='0'">
-                            <option value="100">100 tweets/days</option>            
-                            <option value="200">200 tweets/days</option>
-                            <option value="500">500 tweets/days</option>
-                        </ng-template>
-                        <ng-template [ngIf]="dorm=='1'">
-                            <option value="100">100 tweets/month</option>            
-                            <option value="200">200 tweets/month</option>
-                            <option value="500">500 tweets/month</option>
-                        </ng-template>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <button class="form-control btn btn-info" (click)="detailed_search()">Search</button>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="chart-wrapper chart-grooming">
-        <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [plugins]="barChartPlugins"
-            [legend]="barChartLegend"
-            [chartType]="barChartType">
-        </canvas>
-    </div>
+<div class="chart-wrapper chart-grooming">
+    <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [chartType]="barChartType">
+    </canvas>
 </div>

@@ -7,6 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class LineChartComponent implements OnInit {
   @Input() newChartData;
   public lineChartOptions:any = {
+    scales: {
+      yAxes: [{
+          ticks: {
+              beginAtZero: true
+          }
+      }]
+    },
     legend: {
       labels: {
         fontColor: "white",
