@@ -38,6 +38,7 @@ export class WelcomeComponent implements OnInit {
     //this.http.get('./assets/data/db.json').subscribe((data: any[])=>{ 
     //this.http.get('https://25d32100.ngrok.io/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
     this.http.get('http://127.0.0.1:8000/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
+      console.log(data);
       this.resultdata = data;
       this.imagePath = this.domSanitizer.bypassSecurityTrustUrl(this.resultdata['poswc']);
       this.newChartData = [this.resultdata["positive"].toFixed(1), this.resultdata["negative"].toFixed(1), (100 - (this.resultdata["positive"] + this.resultdata["negative"])).toFixed(1)];

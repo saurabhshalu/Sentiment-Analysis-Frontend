@@ -23,7 +23,7 @@
             <app-tweet [myurl]="resultdata.negtweet[1]"></app-tweet>
         </div>
     </div>
-    <div class="section3">
-        <img  *ngIf="imagePath!=null" [src]="imagePath"/>
+    <div class="section3"  *ngIf="imagePath!=null && newChartData!==null && searchtext.length!==0">
+        <img [src]="imagePath"/>
     </div>
 </div>
