@@ -68,9 +68,9 @@ export class LineChartComponent implements OnInit {
 
   ngOnChanges() {
     if (this.newChartData !== undefined && this.newChartData !==null) {
-      this.lineChartData[0]['data'] = this.newChartData.poslist;
-      this.lineChartData[1]['data'] = this.newChartData.neglist;
-      this.lineChartLabels = this.newChartData.label;
+      this.lineChartData[0]['data'] = this.newChartData.poslist.reverse();
+      this.lineChartData[1]['data'] = this.newChartData.neglist.reverse();
+      this.lineChartLabels = this.newChartData.label.reverse();
       console.log("New chart value detected");
     }
   }

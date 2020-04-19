@@ -18,5 +18,6 @@ export class TweetComponent implements OnInit {
     twttr.widgets.load();
   }
 
+
  // myurl = "https://twitter.com/sundarpichai/status/1234887183896461313";
 }

@@ -66,6 +66,13 @@ input:focus {
     display: flex;
     margin-top: 50px;
     justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+}
+
+.section3 img {
+    max-width: 98%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -76,6 +83,9 @@ input:focus {
     }
     .section2 {
         flex-direction: column;
+    }
+    .section2 .right {
+        margin-top: 50px;
     }
     .search-nonempty {
         top: 110px;

@@ -32,6 +32,20 @@
     align-items: center;
 }
 
+.section4 {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section4 img {
+    max-width: 98%;
+}
+
 @media screen and (max-width: 1000px) {
     .section1 {
         flex-direction: column;

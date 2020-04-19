@@ -14,6 +14,7 @@ export class DetailsComponent implements OnInit {
   lineChartData: any = null;
   public newChartData: any = null;
   public imagePath: any = null;
+  public imagePath1: any = null;
   constructor(private http: HttpClient, private domSanitizer: DomSanitizer) { }
 
   ngOnInit() {
@@ -23,11 +24,16 @@ export class DetailsComponent implements OnInit {
     if (this.hashtag.length==0 || this.dorm == "-1" || this.countofdorm=="0" || this.tweetcount=="0") {
       return
     }
+    this.lineChartData = null;
+    this.imagePath = null;
+    this.imagePath1 = null;
     (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
     this.http.get('http://127.0.0.1:8000/reqres?hashtag=' + this.hashtag.replace('#','') + ' &type=1&dorm=' + this.dorm + '&countofdorm=' + this.countofdorm + '&tcount=' + this.tweetcount).subscribe((data: any[])=>{ 
     this.lineChartData = data; 
     this.newChartData = [this.lineChartData["positive"].toFixed(1), this.lineChartData["negative"].toFixed(1), (100 - (this.lineChartData["positive"] + this.lineChartData["negative"])).toFixed(1)];
     console.log(data);
+    this.imagePath = this.domSanitizer.bypassSecurityTrustUrl(this.lineChartData['poswc']);
+    this.imagePath1 = this.domSanitizer.bypassSecurityTrustUrl(this.lineChartData['negwc']);
 
     // this.http.get('./assets/data/imagetext.txt', { responseType: 'text' }).subscribe((imgdata: any)=>{
     //   this.imagePath = imgdata;
