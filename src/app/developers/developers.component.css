@@ -1,0 +1,70 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+ }
+ .card {
+   flex: 0 0 300px;
+   min-width: 300px;
+   background: #f2f2f2;
+   border-radius: 7px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 10px 10px 50px 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   font-family: arial;
+   height: 410px;
+ }
+ .cardblack {
+     color:black;
+     text-align: center;
+     font-size: 30px;
+     font-weight: bold;
+ }
+ .cardtitle {
+     color: grey;
+     font-size: 18px;  
+     text-align: center;
+ }
+ .cardbutton {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.card_img {
+    border-radius: 10px 10px 40px 40px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+#mainContainerCss {
+    margin-top: 60px;
+    display: flex;
+    min-height: calc(100vh - 120px);
+    align-items: center;
+    flex-direction: row;
+}
+
+.left, .right{
+    flex: 1;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #mainContainerCss {
+        flex-direction: column;
+        height: 100%;
+    }
+    .left, .right {
+        margin-top: 50px;
+    }
+}

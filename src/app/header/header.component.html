@@ -4,7 +4,7 @@
         <div class = "blob-2"></div>
     </div>
 </div>
-<nav class="navbar navbar-dark">
+<!-- <nav class="navbar navbar-dark">
     <a class="navbar-brand" [routerLink] = "'/'">
         <img src="assets/img/icon2.svg" width="30" height="30" class="d-inline-block align-top" alt="SentimentAnalysisOfTweets">
         Sentiment Analysis
@@ -16,5 +16,38 @@
         <li *ngIf="router.url == '/details'">
             <a [routerLink] = "'/'">SIMPLE MODE</a>
         </li>
+        <li>
+            <a [routerLink] = "'/'">DEVELOPERS</a>
+        </li>
     </ul>
-</nav>
+</nav> -->
+
+<header>
+    <div class="logo">
+        <a  [routerLink] = "'/'">
+        <img class="logo-img" src="assets/img/icon2.svg" alt="logo">
+        </a>
+        <a [routerLink] = "'/'" style="text-decoration: none;">
+        <p>Sentiment Analysis</p>
+        </a>
+     </div>
+     <nav>
+        <input type="checkbox" id="nav" class="hidden"/>
+        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+        <div class="live"></div>
+        <div class="nav-container">
+            <ul>
+            <li *ngIf="router.url != '/developers' && router.url != '/details'">
+                <a class="anchor" [routerLink] = "'/details'">Detailed Mode</a>
+            </li>
+            <li *ngIf="router.url != '/developers' && router.url == '/details'">
+                <a class="anchor" [routerLink] = "'/'">Simple Mode</a>
+            </li>
+            <li *ngIf="router.url == '/developers'">
+                <a class="anchor" [routerLink] = "'/'">Home</a>
+            </li>
+            <li><a [routerLink] = "'/developers'" class="anchor">Developers</a></li>
+            </ul>
+        </div>
+     </nav>
+</header>
