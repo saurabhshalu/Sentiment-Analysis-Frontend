@@ -79,7 +79,7 @@ export class LineChartComponent implements OnInit {
       this.lineChartData[0]['data'] = posdata.reverse();
       this.lineChartData[1]['data'] = negdata.reverse();
       this.lineChartLabels = this.newChartData.label.reverse();
-      console.log("New chart value detected");
+      //console.log("New chart value detected");
     }
   }
 

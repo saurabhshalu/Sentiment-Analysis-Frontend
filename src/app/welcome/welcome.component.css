@@ -49,6 +49,7 @@ input:focus {
     width: 75%;
     height: 100%;
     align-self: center;
+    margin-top: 100px;
 }
 
 .section2 {

@@ -64,9 +64,9 @@ export class PieChartComponent implements OnInit, OnChanges {
   ngOnChanges() {
     if (this.newPieChartData !== undefined || this.newPieChartData !==null) {
       this.pieChartData = this.newPieChartData;
-      console.log("New chart value detected");
+      //console.log("New chart value detected");
     }
-    console.log('change detected');
+    //console.log('change detected');
   }
 
 }

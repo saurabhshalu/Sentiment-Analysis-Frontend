@@ -46,7 +46,7 @@ export class DetailsComponent implements OnInit {
     (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
     },
     (err: any[])=>{
-      console.log(err);
+      //console.log(err);
       (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
     })
   }

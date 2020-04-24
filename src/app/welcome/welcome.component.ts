@@ -41,7 +41,7 @@ export class WelcomeComponent implements OnInit {
     //this.http.get('./assets/data/db.json').subscribe((data: any[])=>{ 
     //this.http.get('https://25d32100.ngrok.io/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
     this.http.get('http://127.0.0.1:8000/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
-      console.log(data);
+      //console.log(data);
       this.resultdata = data;
       this.imagePath = this.domSanitizer.bypassSecurityTrustUrl(this.resultdata['poswc']);
       this.imagePath1 = this.domSanitizer.bypassSecurityTrustUrl(this.resultdata['negwc']);
@@ -49,7 +49,7 @@ export class WelcomeComponent implements OnInit {
       (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
     },
     (err: any[])=>{
-      console.log(err);
+      //console.log(err);
       this.resultdata = null;
       (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
     });

@@ -38,15 +38,15 @@
         <div class="nav-container">
             <ul>
             <li *ngIf="router.url != '/developers' && router.url != '/details'">
-                <a class="anchor" [routerLink] = "'/details'">Detailed Mode</a>
+                <a class="anchor" [routerLink] = "'/details'" onclick="document.getElementById('nav').checked=false;">Detailed Mode</a>
             </li>
             <li *ngIf="router.url != '/developers' && router.url == '/details'">
-                <a class="anchor" [routerLink] = "'/'">Simple Mode</a>
+                <a class="anchor" [routerLink] = "'/'" onclick="document.getElementById('nav').checked=false;">Simple Mode</a>
             </li>
             <li *ngIf="router.url == '/developers'">
-                <a class="anchor" [routerLink] = "'/'">Home</a>
+                <a class="anchor" [routerLink] = "'/'" onclick="document.getElementById('nav').checked=false;">Home</a>
             </li>
-            <li><a [routerLink] = "'/developers'" class="anchor">Developers</a></li>
+            <li><a [routerLink] = "'/developers'" class="anchor" onclick="document.getElementById('nav').checked=false;">Developers</a></li>
             </ul>
         </div>
      </nav>
