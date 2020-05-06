@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
     templateUrl: './App.FeedbackComponent.html',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 export class FeedbackComponentNew {
     constructor() {}
     testClick() {
-        alert('testttt');
+        alert('test');
+        //@ts-ignore
+        document.getElementById('feedback-form').submit();
     }
 }
