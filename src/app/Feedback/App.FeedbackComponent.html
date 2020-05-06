@@ -1,28 +1,28 @@
 <div class="container">
-    <!-- <form name="feedback-form" method="POST" netlify netlify-honeypot="bot-field">
+    <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
       <label for="fname">Name</label>
-      <input type="text" name="name" placeholder="Enter your name">
+      <input type="text" [(ngModel)]="name" name="name" placeholder="Enter your name" required>
   
       <label for="email">Email</label>
-      <input type="email" name="email" placeholder="Enter your email address">
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Enter your email address" required>
 
       <label for="tweeturl">Tweet URL</label>
-      <input type="url" name="tweeturl" placeholder="Enter the url of tweet">
+      <input type="url" [(ngModel)]="url" name="tweeturl" placeholder="Enter the url of tweet" required>
   
       <label for="subject">Feedback</label>
-      <textarea name="subject" placeholder="Write something.. (optional)" style="height:200px"></textarea>
+      <textarea [(ngModel)]="subject" name="subject" placeholder="Write something.. (optional)" style="height:200px"></textarea>
  
       <button type="button" (click)="testSubmit()">Submit</button>
-    </form> -->
+    </form>
 
 
-    <div class="container">
+    <!-- <div class="container">
       <form name="contact" netlify netlify-honeypot="bot-field">   
         <input type="text" name="name" />
         <input type="email" name="email" />
         <textarea name=”message”></textarea>
-        <button type="submit">Submit</button>
+        <button type="button" (click)="testSubmit()">Submit</button>
       </form>
-    </div>
+    </div> -->
 
   </div>

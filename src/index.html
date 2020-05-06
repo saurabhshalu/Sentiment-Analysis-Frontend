@@ -9,11 +9,26 @@
 </head>
 <body>  
   
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>   
+  <!-- <form name="contact" netlify netlify-honeypot="bot-field" hidden>   
     <input type="text" name="name" />
     <input type="email" name="email" />
     <textarea name=”message”></textarea>
+  </form> -->
+
+  <form name="contact" method="POST" netlify netlify-honeypot="bot-field" hidden> 
+    <label for="fname">Name</label>
+    <input type="text" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Enter your email address" required>
+
+    <label for="tweeturl">Tweet URL</label>
+    <input type="url" name="tweeturl" placeholder="Enter the url of tweet" required>
+
+    <label for="subject">Feedback</label>
+    <textarea name="subject" placeholder="Write something.. (optional)" style="height:200px"></textarea>
   </form>
+
 
   <!-- <app-root></app-root>   -->
   <main-app-root></main-app-root>
