@@ -178,7 +178,7 @@ nav ul li:not(:first-child) {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 815px) {
     @keyframes up-right {
         0% {
             transform: scale(1);

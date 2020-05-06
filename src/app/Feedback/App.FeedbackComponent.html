@@ -1,0 +1,22 @@
+<div class="container">
+    <form name="feedback-form" method="POST" data-netlify="true">
+  
+      <label for="fname">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required="required">
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required="required">
+
+      <label for="tweeturl">Tweet URL</label>
+      <input type="url" id="tweeturl" name="tweeturl" placeholder="Enter the url of tweet" required="required">
+  
+      <label for="subject">Feedback</label>
+      <textarea id="subject" name="subject" placeholder="Write something.. (optional)" style="height:200px"></textarea>
+        
+      <div>
+          <div data-netlify-recaptcha="true"></div>
+      </div>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
