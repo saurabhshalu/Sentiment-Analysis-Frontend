@@ -11,18 +11,8 @@
   
       <label for="subject">Feedback</label>
       <textarea [(ngModel)]="subject" name="subject" placeholder="Write something.. (optional)" style="height:200px"></textarea>
- 
+      <br>
+      <div data-netlify-recaptcha="true"></div>
       <button type="button" (click)="testSubmit()">Submit</button>
     </form>
-
-
-    <!-- <div class="container">
-      <form name="contact" netlify netlify-honeypot="bot-field">   
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <textarea name=”message”></textarea>
-        <button type="button" (click)="testSubmit()">Submit</button>
-      </form>
-    </div> -->
-
   </div>

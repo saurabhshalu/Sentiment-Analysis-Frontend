@@ -17,19 +17,6 @@ export class FeedbackComponentNew {
         this.url = "";
         this.subject = "";
     }
-    // testSubmit() {
-    //     const body1 = new HttpParams().set('form-name','contact').append('name','saurabh').append('email','saurabh111@gmail.com').append('message','here is test message');
-
-    //     this.http.post('/', body1.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, responseType: 'text'}).subscribe(
-    //       res => {
-    //           console.log(res);
-    //       },
-    //       err => {
-    //           console.log(err);
-    //       }
-    //     );
-    // }
-
 
     testSubmit() {
         const body1 = new HttpParams().set('form-name','contact')
@@ -40,7 +27,7 @@ export class FeedbackComponentNew {
 
         this.http.post('/', body1.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, responseType: 'text'}).subscribe(
           res => {
-              console.log(res);
+              document.body.innerHTML = res;
           },
           err => {
               console.log(err);
