@@ -11,7 +11,7 @@ export class WelcomeComponentNew implements OnInit {
     constructor(private http: HttpClient, private domSanitizer: DomSanitizer) { }
 
     public searchtext : string;
-    public resultdata: Object;
+    public resultdata: any;
     public newChartData: any;
     public imagePath: any;
     public imagePath1: any;
