@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
-import { $ } from 'protractor';
+import { HttpParams, HttpClient } from '@angular/common/http';
 
 @Component({
     templateUrl: './App.FeedbackComponent.html',
     styleUrls: ['./App.FeedbackComponent.css']
 })
 export class FeedbackComponentNew {
-    constructor() {}
-    testClick() {
-        alert('test');
-        //@ts-ignore
-        document.getElementById('feedback-form').submit();
+    constructor(private http: HttpClient) {}
+    testSubmit() {
+        const body1 = new HttpParams().set('form-name','contact').append('name','saurabh').append('email','saurabh@gmail.com').append('message','here is test message');
+
+        this.http.post('/', body1.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
+          res => {
+              alert(res);
+          }
+        );
     }
 }

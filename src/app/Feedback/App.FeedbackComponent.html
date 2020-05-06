@@ -1,17 +1,8 @@
 <div class="container">
-    <form name="feedback-form" id="feedback-form" method="POST" netlify>
-      <label for="fname">Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name">
-  
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email address">
-
-      <label for="tweeturl">Tweet URL</label>
-      <input type="url" id="tweeturl" name="tweeturl" placeholder="Enter the url of tweet">
-  
-      <label for="subject">Feedback</label>
-      <textarea id="subject" name="subject" placeholder="Write something.. (optional)" style="height:200px"></textarea>
- 
-      <input type="submit" value="Submit" (click)="testClick()"/>
+    <form name="contact" netlify netlify-honeypot="bot-field">   
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name=”message”></textarea>
+      <button type="button" (click)="testSubmit()">Submit</button>
     </form>
   </div>
