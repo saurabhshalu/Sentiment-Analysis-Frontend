@@ -5,5 +5,8 @@ import { Component } from '@angular/core';
     styleUrls: ['./App.FeedbackComponent.css']
 })
 export class FeedbackComponentNew {
-
+    constructor() {}
+    testClick() {
+        alert('testttt');
+    }
 }
