@@ -12,7 +12,10 @@ export class FeedbackComponentNew {
 
         this.http.post('/', body1.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, responseType: 'text'}).subscribe(
           res => {
-              alert(res);
+              console.log(res);
+          },
+          err => {
+              console.log(err);
           }
         );
     }

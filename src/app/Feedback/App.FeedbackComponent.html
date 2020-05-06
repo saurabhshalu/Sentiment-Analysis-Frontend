@@ -1,8 +1,28 @@
 <div class="container">
-    <form name="contact" netlify netlify-honeypot="bot-field">   
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <textarea name=”message”></textarea>
+    <!-- <form name="feedback-form" method="POST" netlify netlify-honeypot="bot-field">
+      <label for="fname">Name</label>
+      <input type="text" name="name" placeholder="Enter your name">
+  
+      <label for="email">Email</label>
+      <input type="email" name="email" placeholder="Enter your email address">
+
+      <label for="tweeturl">Tweet URL</label>
+      <input type="url" name="tweeturl" placeholder="Enter the url of tweet">
+  
+      <label for="subject">Feedback</label>
+      <textarea name="subject" placeholder="Write something.. (optional)" style="height:200px"></textarea>
+ 
       <button type="button" (click)="testSubmit()">Submit</button>
-    </form>
+    </form> -->
+
+
+    <div class="container">
+      <form name="contact" netlify netlify-honeypot="bot-field">   
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name=”message”></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
   </div>
