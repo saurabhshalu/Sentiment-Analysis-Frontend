@@ -1,9 +1,3 @@
-.navbar {
-    min-width: 440px;
-    background: #212121;
-}
-
-
 #overlay {
     position: fixed; /* Sit on top of the page content */
     display: none;
@@ -293,5 +287,11 @@ nav ul li:not(:first-child) {
     }
     .nav-open i:nth-child(3) {
         margin-top: 4px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    header {
+        max-width: 100vw;
     }
 }
