@@ -81,12 +81,23 @@ input:focus {
 
     .section1 {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 90px;
     }
     .section2 {
         flex-direction: column;
     }
     .section2 .right {
         margin-top: 50px;
+    }
+}
+
+
+@media screen and (max-width: 510px) {
+    .search-container {
+        width: 300px;
+    }
+    .section2 {
+        width: 120%;
+        padding-left: 20px;
     }
 }
