@@ -27,7 +27,6 @@ export class DetailsComponentNew {
         this.imagePath = null;
         this.imagePath1 = null;
         (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
-        //this.http.get('http://127.0.0.1:8000/reqres?hashtag=' + this.hashtag.replace('#','') + ' &type=1&dorm=' + this.dorm + '&countofdorm=' + this.countofdorm + '&tcount=' + this.tweetcount).subscribe((data: any[])=>{ 
         //this.http.get('https://sentiment-rest.herokuapp.com/reqres?hashtag=' + this.hashtag.replace('#','') + ' &type=1&dorm=' + this.dorm + '&countofdorm=' + this.countofdorm + '&tcount=' + this.tweetcount).subscribe((data: any[])=>{ 
         this.http.get('https://sentimentreply2.herokuapp.com/reqres?hashtag=' + this.hashtag.replace('#','') + ' &type=1&dorm=' + this.dorm + '&countofdorm=' + this.countofdorm + '&tcount=' + this.tweetcount).subscribe((data: any[])=>{ 
             this.lineChartData = data; 

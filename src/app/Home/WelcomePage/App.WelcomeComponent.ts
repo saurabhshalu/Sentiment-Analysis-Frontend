@@ -38,7 +38,6 @@ export class WelcomeComponentNew implements OnInit {
     getdata() {
         (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
         this.newChartData = null;
-        //this.http.get('http://127.0.0.1:8000/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
         //this.http.get('https://sentiment-rest.herokuapp.com/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
         this.http.get('https://sentimentreply2.herokuapp.com/reqres?hashtag=' + this.searchtext.replace('#','')).subscribe((data: any[])=>{ 
             this.resultdata = data;
