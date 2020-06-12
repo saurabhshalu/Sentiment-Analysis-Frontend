@@ -23,13 +23,13 @@
                             <option value="0">--Select--</option>
                             <ng-template [ngIf]="dorm=='0'">
                                 <option value="3">3 days</option>            
-                                <option value="6">6 days</option>
-                                <option value="9">9 days</option>
+                                <option value="5">5 days</option>
+                                <option value="8">8 days</option>
                             </ng-template>
                             <ng-template [ngIf]="dorm=='1'">
                                 <option value="3">3 months</option>            
                                 <option value="6">6 months</option>
-                                <option value="12">12 months</option>   
+                                <option value="9">9 months</option>   
                             </ng-template>
                         </select>
                     </td>
@@ -45,9 +45,9 @@
                                 <option value="500">500 tweets/days</option>
                             </ng-template>
                             <ng-template [ngIf]="dorm=='1'">
-                                <option value="100">100 tweets/month</option>            
-                                <option value="200">200 tweets/month</option>
-                                <option value="500">500 tweets/month</option>
+                                <option value="25">25 tweets/month</option>            
+                                <option value="50">50 tweets/month</option>
+                                <!-- <option value="500">500 tweets/month</option> -->
                             </ng-template>
                         </select>
                     </td>
