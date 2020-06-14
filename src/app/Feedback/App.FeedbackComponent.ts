@@ -19,6 +19,8 @@ export class FeedbackComponentNew {
     }
 
     testSubmit() {
+        if(this.name.replace(' ','')=='' || this.email.replace(' ','')=='' || this.subject.replace(' ','')=='') 
+            return;
         const body1 = new HttpParams().set('form-name','contact')
         .append('name',this.name)
         .append('email',this.email)       

@@ -1,16 +1,17 @@
 <div class="container">
     <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
-      <label for="fname">Name</label>
+      <label for="fname">Name <span style="color: red;">*</span></label>
       <input type="text" [(ngModel)]="name" name="name" placeholder="Enter your name" required>
   
-      <label for="email">Email</label>
+      <label for="email">Email <span style="color: red;">*</span></label>
       <input type="email" [(ngModel)]="email" name="email" placeholder="Enter your email address" required>
 
       <label for="tweeturl">Tweet URL</label>
       <input type="url" [(ngModel)]="url" name="tweeturl" placeholder="Enter the url of tweet" required>
   
-      <label for="subject">Feedback</label>
+      <label for="subject">Feedback <span style="color: red;">*</span></label>
       <textarea [(ngModel)]="subject" name="subject" placeholder="Write something.. (optional)" style="height:200px"></textarea>
       <button type="button" (click)="testSubmit()">Submit</button>
+      <p *ngIf="name=='' || email=='' || subject==''" style="margin-top: 20px; color: red; font-size: 22px;">Please fill all required fields!</p>
     </form>
   </div>
