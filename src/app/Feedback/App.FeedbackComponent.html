@@ -10,7 +10,7 @@
       <input type="url" [(ngModel)]="url" name="tweeturl" placeholder="Enter the url of tweet" required>
   
       <label for="subject">Feedback <span style="color: red;">*</span></label>
-      <textarea [(ngModel)]="subject" name="subject" placeholder="Write something.. (optional)" style="height:200px"></textarea>
+      <textarea [(ngModel)]="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       <button type="button" (click)="testSubmit()">Submit</button>
       <p *ngIf="name=='' || email=='' || subject==''" style="margin-top: 20px; color: red; font-size: 22px;">Please fill all required fields!</p>
     </form>
